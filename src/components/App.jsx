@@ -1,16 +1,20 @@
+// import { lazy, Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import HomePage from './Pages/HomePage';
+import GhostBox from './Pages/GhostBox';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      React homework template
+    <div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route />
+        <Route />
+        <Route />
+        <Route path="*" element={<GhostBox />} />
+      </Routes>
     </div>
   );
 };
+
+export default App;

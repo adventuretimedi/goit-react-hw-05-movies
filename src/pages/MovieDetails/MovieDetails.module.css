@@ -1,0 +1,43 @@
+.movieCard {
+  display: flex;
+  gap: 20px;
+}
+
+.desctiptionCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.genre,
+.overview,
+.info {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.info {
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+.infoItem {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+.infoItem:hover,
+.infoItem:focus {
+  color: hotpink;
+}
+
+.listItem {
+  margin-bottom: 10px;
+}

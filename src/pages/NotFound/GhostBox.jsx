@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import s from '../Style/GhostBox.module.css';
+import s from './GhostBox.module.css';
 
 function GhostBox() {
   const [xAxis, setXAxis] = useState(-100);

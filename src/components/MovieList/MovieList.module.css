@@ -1,0 +1,21 @@
+.link {
+  display: flex;
+  gap: 10px;
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.link:hover,
+link:focus {
+  color: hotpink;
+}
+
+.title {
+  margin-bottom: 15px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

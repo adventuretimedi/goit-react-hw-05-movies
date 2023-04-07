@@ -34,8 +34,9 @@ const MovieDetails = () => {
     movie.poster_path !== null
       ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
       : '';
+
   return (
-    <section>
+    <div>
       <Link to={backLinkHref} className={s.backBtn}>
         <div className={s.backBtnWrapper}>
           <IoChevronBack />
@@ -85,7 +86,7 @@ const MovieDetails = () => {
           <Outlet />
         </Suspense>
       </div>
-    </section>
+    </div>
   );
 };
 

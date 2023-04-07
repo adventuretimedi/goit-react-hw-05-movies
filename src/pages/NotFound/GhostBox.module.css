@@ -1,21 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);
-
 :root {
   --purple: #28254c;
   --l-purple: #332f63;
   --t-purple: #8c8aa7;
   --pink: #ff5e65;
   --white: #fff;
-}
-
-html,
-body {
-  background: var(--purple);
-  font-family: 'Ubuntu', sans-serif;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 .box {

@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { Suspense, useEffect, useState } from 'react';
+import { useParams, useLocation, Link, Outlet } from 'react-router-dom';
+import { IoChevronBack } from 'react-icons/io5';
 import { getMovieDetails } from 'servises/Api';
-import { Link } from 'react-router-dom';
-import { Outlet } from 'react-router-dom';
+import { ColorRing } from 'react-loader-spinner';
 import s from './MovieDetails.module.css';
 
 const MovieDetails = () => {
@@ -30,16 +30,20 @@ const MovieDetails = () => {
     return null;
   }
 
+  const posterPath =
+    movie.poster_path !== null
+      ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+      : '';
   return (
     <section>
-      <Link to={backLinkHref}>Back</Link>
-      {/* <Link to="/movies">Back to movies</Link> */}
+      <Link to={backLinkHref} className={s.backBtn}>
+        <div className={s.backBtnWrapper}>
+          <IoChevronBack />
+          <span>Back</span>
+        </div>
+      </Link>
       <div className={s.movieCard}>
-        <img
-          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-          alt={'poster'}
-          width={200}
-        />
+        <img src={posterPath} alt={'poster'} width={200} />
         <div className={s.desctiptionCard}>
           <p className={s.title}>{movie.title}</p>
           <p>Rating: {movie.vote_average.toFixed(1)}</p>
@@ -63,7 +67,23 @@ const MovieDetails = () => {
             </Link>
           </li>
         </ul>
-        <Outlet />
+        <Suspense
+          fallback={
+            <div>
+              <ColorRing
+                visible={true}
+                height="80"
+                width="80"
+                ariaLabel="blocks-loading"
+                wrapperClass="blocks-wrapper"
+                colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
+              />
+              <div>Loading...</div>
+            </div>
+          }
+        >
+          <Outlet />
+        </Suspense>
       </div>
     </section>
   );

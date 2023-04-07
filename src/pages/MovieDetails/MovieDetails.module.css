@@ -41,3 +41,20 @@
 .listItem {
   margin-bottom: 10px;
 }
+
+.backBtn {
+  padding: 10px;
+  display: inline-block;
+  color: aliceblue;
+}
+
+.backBtn:hover,
+.backBtn:focus {
+  color: hotpink;
+}
+
+.backBtnWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

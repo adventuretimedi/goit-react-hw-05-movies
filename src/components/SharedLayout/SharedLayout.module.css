@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+  padding-left: 0;
+  margin-left: 0;
+  height: 60px;
+}
+
+.nav {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.navItem {
+  font-variant-caps: all-petite-caps;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 32px;
+  color: #332f63;
+  margin-left: 20px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  display: block;
+}
+
+.active {
+  color: hotpink;
+}
+
+.navItem:hover,
+.navItem:focus {
+  color: hotpink;
+  fill: #332f63;
+}
+
+.svg {
+  fill: #332f63;
+}

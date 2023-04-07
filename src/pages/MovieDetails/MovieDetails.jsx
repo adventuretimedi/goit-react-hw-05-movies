@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import { getMovieDetails } from 'servises/Api';
 import { Link } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
@@ -8,6 +8,9 @@ import s from './MovieDetails.module.css';
 const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
   const { movieId } = useParams();
+  const location = useLocation();
+  const backLinkHref = location.state?.from ?? '/movies';
+  console.log(location.state);
 
   useEffect(() => {
     const fetchDetails = async () => {
@@ -29,6 +32,8 @@ const MovieDetails = () => {
 
   return (
     <section>
+      <Link to={backLinkHref}>Back</Link>
+      {/* <Link to="/movies">Back to movies</Link> */}
       <div className={s.movieCard}>
         <img
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}

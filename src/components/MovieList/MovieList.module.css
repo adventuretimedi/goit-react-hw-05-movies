@@ -5,12 +5,13 @@
   text-decoration: none;
 }
 
-.link:hover,
-link:focus {
+.title:hover,
+.title:focus {
   color: hotpink;
 }
 
 .title {
+  font-weight: 600;
   margin-bottom: 15px;
 }
 

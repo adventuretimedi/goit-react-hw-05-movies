@@ -1,5 +1,4 @@
-@import-normalize; /* bring in normalize.css styles */
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import-normalize;
 
 :root {
   --purple: #28254c;

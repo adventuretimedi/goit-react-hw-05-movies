@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { SharedLayout } from './SharedLayout/SharedLayout';
 import { lazy } from 'react';
 
@@ -7,7 +7,7 @@ const Movies = lazy(() => import('pages/Movies/Movies'));
 const MovieDetails = lazy(() => import('pages/MovieDetails/MovieDetails'));
 const Cast = lazy(() => import('./Cast/Cast'));
 const Reviews = lazy(() => import('./Reviews/Reviews'));
-const GhostBox = lazy(() => import('../pages/NotFound/GhostBox'));
+// const GhostBox = lazy(() => import('../pages/NotFound/GhostBox'));
 
 export const App = () => {
   return (
@@ -20,7 +20,7 @@ export const App = () => {
           <Route path="reviews" element={<Reviews />} />
         </Route>
       </Route>
-      <Route path="*" element={<GhostBox />} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 };

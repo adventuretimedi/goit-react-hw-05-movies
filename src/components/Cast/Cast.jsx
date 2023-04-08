@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieCast } from 'servises/Api';
 import s from './Cast.module.css';
+import loadming from '../../images/loadming.jpg';
 
 const Cast = () => {
   const [cast, setCast] = useState(null);
@@ -30,7 +31,7 @@ const Cast = () => {
         const profilePath =
           profile_path !== null
             ? `https://image.tmdb.org/t/p/w500${profile_path}`
-            : '';
+            : loadming;
         return (
           <li key={id} className={s.listItem}>
             <div className={s.imageWrapper}>

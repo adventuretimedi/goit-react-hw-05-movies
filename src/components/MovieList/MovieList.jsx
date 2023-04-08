@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import s from './MovieList.module.css';
 import { useLocation } from 'react-router-dom';
+import loadming from '../../images/loadming.jpg';
 
 const MovieList = ({ movies }) => {
   const location = useLocation();
@@ -12,7 +13,7 @@ const MovieList = ({ movies }) => {
         const posterPath =
           movie.poster_path !== null
             ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-            : '';
+            : loadming;
         return (
           <li key={movie.id} className={s.item}>
             <Link

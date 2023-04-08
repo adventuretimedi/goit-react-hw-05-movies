@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import { useParams, useLocation, Link, Outlet } from 'react-router-dom';
 import { IoChevronBack } from 'react-icons/io5';
 import { getMovieDetails } from 'servises/Api';
@@ -9,8 +9,13 @@ const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
   const { movieId } = useParams();
   const location = useLocation();
-  const backLinkHref = location.state?.from ?? '/movies';
-  console.log(location.state);
+  const backLinkHref = useRef(location.state?.from ?? '/movies');
+  // console.log(
+  //   'location: ',
+  //   location.state,
+  //   ', backLinkHref: ',
+  //   backLinkHref.current
+  // );
 
   useEffect(() => {
     const fetchDetails = async () => {
@@ -37,7 +42,7 @@ const MovieDetails = () => {
 
   return (
     <div>
-      <Link to={backLinkHref} className={s.backBtn}>
+      <Link to={backLinkHref.current} className={s.backBtn}>
         <div className={s.backBtnWrapper}>
           <IoChevronBack />
           <span>Back</span>

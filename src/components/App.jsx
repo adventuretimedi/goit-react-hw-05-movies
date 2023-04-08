@@ -21,6 +21,7 @@ export const App = () => {
         </Route>
       </Route>
       <Route path="*" element={<Navigate to="/" />} />
+      {/* <Route path="*" element={<GhostBox />} /> */}
     </Routes>
   );
 };

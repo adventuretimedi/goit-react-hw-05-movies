@@ -12,9 +12,9 @@ const GhostBox = lazy(() => import('../pages/NotFound/GhostBox'));
 export const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<SharedLayout />}>
+      <Route path="/goit-react-hw-05-movies" element={<SharedLayout />}>
         {/* помітка для себе */}
-        <Route path="/goit-react-hw-05-movies" element={<Home />} />
+        {/* <Route path="/goit-react-hw-05-movies" element={<Home />} /> */}
 
         <Route index element={<Home />} />
         <Route path="movies" element={<Movies />} />
@@ -23,8 +23,8 @@ export const App = () => {
           <Route path="reviews" element={<Reviews />} />
         </Route>
       </Route>
-      {/* <Route path="*" element={<Navigate to="/" />} /> */}
       <Route path="*" element={<GhostBox />} />
+      {/* <Route path="*" element={<Navigate to="/" />} /> */}
     </Routes>
   );
 };

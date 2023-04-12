@@ -17,7 +17,7 @@ const MovieList = ({ movies }) => {
         return (
           <li key={movie.id} className={s.item}>
             <Link
-              to={`/movies/${movie.id}`}
+              to={`/goit-react-hw-05-movies/movies/${movie.id}`}
               state={{ from: location }}
               className={s.link}
             >

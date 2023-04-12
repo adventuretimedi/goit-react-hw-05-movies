@@ -9,7 +9,9 @@ const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
   const { movieId } = useParams();
   const location = useLocation();
-  const backLinkHref = useRef(location.state?.from ?? '/movies');
+  const backLinkHref = useRef(
+    location.state?.from ?? '/goit-react-hw-05-movies/movies'
+  );
   // console.log(
   //   'location: ',
   //   location.state,

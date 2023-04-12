@@ -60,7 +60,7 @@ function GhostBox() {
         </div>
 
         <a
-          href="/"
+          href="/goit-react-hw-05-movies"
           target="_blank"
           rel="noopener noreferrer"
           className={s.boxBtn}

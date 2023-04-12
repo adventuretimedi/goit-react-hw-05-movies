@@ -14,11 +14,18 @@ export const SharedLayout = () => {
       <header>
         <div className={s.container}>
           <nav className={s.nav}>
-            <NavLink to="/" className={linkClassName}>
+            <NavLink
+              to="/goit-react-hw-05-movies"
+              className={linkClassName}
+              end
+            >
               <GiFilmProjector className={s.svg} />
               Home
             </NavLink>
-            <NavLink to="/movies" className={linkClassName}>
+            <NavLink
+              to="/goit-react-hw-05-movies/movies"
+              className={linkClassName}
+            >
               Movies
             </NavLink>
           </nav>

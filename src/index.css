@@ -1,8 +1,4 @@
-@import-normalize;
-
-:root {
-  --purple: #28254c;
-}
+/* @import-normalize; */
 
 * {
   box-sizing: border-box;

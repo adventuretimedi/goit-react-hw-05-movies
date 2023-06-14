@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0;
+  width: 1280px;
+  height: 100vh;
+
+  background-color: rgba(0, 16, 6, 1);
+  background-image: url(/src/images/mavka.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  padding-right: 20px;
+  padding-bottom: 120px;
+}

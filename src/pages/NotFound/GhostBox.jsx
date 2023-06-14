@@ -24,49 +24,51 @@ function GhostBox() {
   }, []);
 
   return (
-    <div className={s.box}>
-      <div className={s.boxGhost}>
-        {[...Array(6)].map((_, i) => (
-          <div className={s.symbol} key={i} />
-        ))}
+    <div className={s.wrapper}>
+      <div className={s.box}>
+        <div className={s.boxGhost}>
+          {[...Array(6)].map((_, i) => (
+            <div className={s.symbol} key={i} />
+          ))}
 
-        <div className={s.ghostContainer}>
-          <div className={s.boxGhostEyes}>
-            <div
-              className={s.boxEyeLeft}
-              style={{ transform: `translate(${xAxis}%, -${yAxis}%)` }}
-            />
-            <div
-              className={s.boxEyeRight}
-              style={{ transform: `translate(${xAxis}%, -${yAxis}%)` }}
-            />
+          <div className={s.ghostContainer}>
+            <div className={s.boxGhostEyes}>
+              <div
+                className={s.boxEyeLeft}
+                style={{ transform: `translate(${xAxis}%, -${yAxis}%)` }}
+              />
+              <div
+                className={s.boxEyeRight}
+                style={{ transform: `translate(${xAxis}%, -${yAxis}%)` }}
+              />
+            </div>
+            <div className={s.boxGhostBottom}>
+              {[...Array(5)].map((_, i) => (
+                <div key={i} />
+              ))}
+            </div>
           </div>
-          <div className={s.boxGhostBottom}>
-            {[...Array(5)].map((_, i) => (
-              <div key={i} />
-            ))}
-          </div>
+
+          <div className={s.boxGhostShadow}></div>
         </div>
 
-        <div className={s.boxGhostShadow}></div>
-      </div>
-
-      <div className={s.boxDescription}>
-        <div className={s.descriptionContainer}>
-          <div className={s.descriptionTitle}>Whoops!</div>
-          <div className={s.descriptionText}>
-            It seems like we couldn't find the page you were looking for
+        <div className={s.boxDescription}>
+          <div className={s.descriptionContainer}>
+            <div className={s.descriptionTitle}>Whoops!</div>
+            <div className={s.descriptionText}>
+              It seems like we couldn't find the page you were looking for
+            </div>
           </div>
-        </div>
 
-        <a
-          href="/goit-react-hw-05-movies"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={s.boxBtn}
-        >
-          Go back
-        </a>
+          <a
+            href="/goit-react-hw-05-movies"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={s.boxBtn}
+          >
+            Go back
+          </a>
+        </div>
       </div>
     </div>
   );

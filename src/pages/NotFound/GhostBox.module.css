@@ -1,17 +1,32 @@
-:root {
+/* :root {
   --purple: #28254c;
   --l-purple: #332f63;
   --t-purple: #8c8aa7;
   --pink: #ff5e65;
   --white: #fff;
-}
+} */
 
+.wrapper {
+  margin: 0;
+  width: 1280px;
+  height: 100vh;
+  background-color: rgba(0, 16, 6, 1);
+  background-image: url(/src/images/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .box {
-  width: 350px;
-  height: 100%;
-  max-height: 600px;
-  min-height: 450px;
-  background: var(--l-purple);
+  /* this is small box */
+  /* size for mobile */
+  /* width: 350px;
+  height: 100%; */
+
+  /* max-height: 600px;
+  min-height: 450px; */
+
+  width: 800px;
+  height: 500px;
+  background: rgba(70, 98, 90, 0.3);
   border-radius: 20px;
   position: absolute;
   left: 50%;
@@ -36,7 +51,7 @@
   content: '';
   width: 12px;
   height: 4px;
-  background: var(--white);
+  background: #ffffff;
   position: absolute;
   border-radius: 5px;
   bottom: 65px;
@@ -71,7 +86,7 @@
   content: '';
   width: 12px;
   height: 4px;
-  background: var(--white);
+  background: #fff;
   position: absolute;
   border-radius: 5px;
   top: 5px;
@@ -93,7 +108,7 @@
   content: '';
   width: 15px;
   height: 4px;
-  background: var(--white);
+  background: #fff;
   position: absolute;
   border-radius: 5px;
   top: 10px;
@@ -168,7 +183,7 @@
 .box .boxGhost .ghostContainer .boxGhostEyes .boxEyeLeft {
   width: 12px;
   height: 12px;
-  background: #28254c;
+  background: #162920;
   border-radius: 50%;
   /* margin: 0 10px; */
   margin-right: 10px;
@@ -179,7 +194,7 @@
 .box .boxGhost .ghostContainer .boxGhostEyes .boxEyeRight {
   width: 12px;
   height: 12px;
-  background: #28254c;
+  background: #162920;
   border-radius: 50%;
   margin: 0 30px;
   /* margin: 0 10px; */
@@ -213,7 +228,7 @@
 
 .boxGhost .boxGhostShadow {
   height: 20px;
-  box-shadow: 0 50px 15px 5px #3b3769;
+  box-shadow: 0 50px 15px 5px #46625a80;
   border-radius: 50%;
   margin: 0 auto;
   animation: smallnbig 3s ease-in-out infinite;
@@ -247,13 +262,13 @@
 .box .boxDescription .boxBtn {
   display: block;
   position: relative;
-  background: #ff69b4;
+  background: #c0dfa1;
   border: 1px solid transparent;
-  border-radius: 50px;
+  border-radius: 12px;
   height: 50px;
   text-align: center;
   text-decoration: none;
-  color: #ffffff;
+  color: #001006;
   line-height: 50px;
   font-size: 18px;
   padding: 0 70px;
@@ -263,13 +278,16 @@
   overflow: hidden;
   /* -webkit-mask-image: -webkit-radial-gradient(white, black); */
 }
+.box .boxDescription .boxBtn:hover {
+  color: #fff;
+}
 
 .box .boxDescription .boxBtn:before {
   content: '';
   position: absolute;
   width: 20px;
   height: 100px;
-  background: #ffffff;
+  background: rgba(70, 98, 90, 1);
   bottom: -25px;
   left: 0;
   border: 2px solid #ffffff;
